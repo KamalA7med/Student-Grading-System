@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace Student_Grading_System
 {
+    public delegate void Del();
     internal class Program
     {
+       
         static void Main(string[] args)
         {
             List<Student<int>> Students_list=new List<Student<int>>();
@@ -38,7 +40,7 @@ namespace Student_Grading_System
                 Add_Another_Student = char.Parse(Console.ReadLine());
                 ++i;
             } while (char.ToUpper(Add_Another_Student) == 'Y');
-            Student_Grading_System<int>.Dispaly_Grading_Info(Students_list, 50, Normal_Header, Calculate_Avg, Check_Passing, Normal_Mode);
+            Grades_Report<int>.Generate_Report("Students Status",Students_list, 50, Normal_Header, Calculate_Avg, Check_Passing, Normal_Mode);
 
         }
        public static void Normal_Header()
