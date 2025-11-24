@@ -1,21 +1,52 @@
-# SmartGrader
+# Student Grading System
 
-A C# console application to manage students’ grades, calculate averages, and track pass/fail status.
+A simple C# console application to manage and display student grades, calculate averages, and generate a summary report of students' success or failure.
 
-## Overview
-SmartGrader allows teachers or users to input students' grades, automatically calculates their average, and determines if they have passed or failed based on a defined passing mark. The results are displayed in a clean, formatted table.
+---
 
 ## Features
-- Add multiple students and their grades.
-- Supports input for 6 subjects per student.
+
+- Add multiple students with their grades.
+- Supports grades of generic types (e.g., integers, doubles).
 - Calculates the average grade for each student.
-- Determines pass/fail status based on a passing threshold.
-- Displays results in a formatted table with student name, average, and status.
+- Checks if a student passes or fails based on a defined passing degree.
+- Displays a formatted report showing:
+  - Student Name
+  - Average Grade
+  - Status (Success/Failed)
+- Counts the number of passing and failing students.
 
-## How It Works
-1. Enter the student's name.
-2. Enter grades for 6 subjects (0–100).
-3. Optionally, add more students.
-4. The program calculates each student's average and displays their status.
+---
 
+## Project Structure
+
+- `Program.cs`:  
+  Main program that handles input and triggers the report generation.
+
+- `Student.cs`:  
+  Represents a student with a name and a list of grades.
+
+- `Grades_Report.cs`:  
+  Contains methods to generate and display the grading report.
+
+- `Student_Grading_System.cs`:  
+  Handles the calculation and display logic of grades.
+
+- `Del.cs` (Delegate):  
+  Defines a delegate to handle header display customization.
+
+---
+
+## How to Use
+
+1. Run the program.
+2. Enter the student's name.
+3. Enter grades for six subjects (0–100).
+4. Choose whether to add another student.
+5. After entering all students, the program generates a detailed report including:
+   - Each student's average grade.
+   - Pass/fail status.
+   - Total number of passing and failing students.
+
+---
 
